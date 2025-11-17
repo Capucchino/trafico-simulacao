@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscrição - Global Dream Agency</title>
+  <style>
+    body { background:#0f0f1e; color:white; font-family:Arial; padding:20px; text-align:center; }
+    input, select, button { padding:15px; margin:10px; width:90%; max-width:400px; font-size:1.2rem; }
+    button { background:#00ff88; color:black; border:none; border-radius:50px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h1>FORMULÁRIO DE INSCRIÇÃO</h1>
+  <p>Preencha AGORA para garantir sua vaga!</p>
+  <form action="sucesso.html">
+    <input type="text" placeholder="Nome completo" required><br>
+    <input type="number" placeholder="Idade" required><br>
+    <input type="text" placeholder="Cidade/Estado" required><br>
+    <input type="tel" placeholder="WhatsApp com DDD" required><br>
+    <input type="file" accept="image/*"><br>
+    <input type="file" accept=".pdf,.jpg"><br>
+    <p><small>Anexe foto recente + RG ou Passaporte</small></p>
+    <button type="submit">ENVIAR INSCRIÇÃO IMEDIATAMENTE</button>
+  </form>
+</body>
+</html>
