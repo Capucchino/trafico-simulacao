@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Dream Agency - Últimas Vagas!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    body { background: linear-gradient(135deg,#1e3c72,#2a5298); color:white; text-align:center; padding:20px; }
+    .container { max-width:900px; margin:auto; background:rgba(0,0,0,0.5); padding:40px; border-radius:20px; }
+    h1 { font-size:3.5rem; margin:20px 0; text-shadow:2px 2px 10px #000; }
+    .timer { font-size:4rem; font-weight:bold; background:#ff0066; padding:20px; border-radius:15px; margin:30px 0; }
+    .btn { background:#00ff88; color:black; padding:20px 40px; font-size:2rem; border:none; border-radius:50px; cursor:pointer; margin:20px; }
+    .btn:hover { background:#00cc66; transform:scale(1.05); transition:0.3s; }
+    .depoimento { background:rgba(255,255,255,0.2); padding:20px; margin:30px; border-radius:15px; }
+    footer { margin-top:50px; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚨 GLOBAL DREAM AGENCY 🚨</h1>
+    <p style="font-size:2rem;">ÚLTIMAS 7 VAGAS PARA EUROPA E EUA!</p>
+    <div class="timer" id="timer">23:59:59</div>
+    
+    <p style="font-size:1.8rem;">Salário de R$ 9.000 a R$ 18.000/mês<br>Moradia + passagem 100% grátis!</p>
+    
+    <div class="depoimento">
+      <p>"Saí do interior sem nada e hoje vivo em Londres com tudo pago!"<br><b>— Ana Clara, 20 anos</b></p>
+    </div>
+    
+    <a href="inscricao.html"><button class="btn">QUERO MINHA VAGA AGORA!</button></a>
+    <p style="color:#ff0066; font-size:1.5rem;">Inscrições encerram quando o contador zerar!</p>
+  </div>
+
+  <script>
+    let time = 24 * 60 * 60; // 24 horas em segundos
+    const timer = document.getElementById('timer');
+    setInterval(() => {
+      time--;
+      let h = Math.floor(time / 3600).toString().padStart(2,'0');
+      let m = Math.floor((time % 3600)/60).toString().padStart(2,'0');
+      let s = (time % 60).toString().padStart(2,'0');
+      timer.innerText = `${h}:${m}:${s}`;
+      if(time <= 0) timer.innerText = "VAGAS ENCERRADAS!";
+    }, 1000);
+  </script>
+</body>
+</html>
